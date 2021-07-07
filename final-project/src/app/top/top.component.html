@@ -1,1 +1,3 @@
-<p>top works!</p>
+<div class="container-sm d-flex flex-wrap justify-content-around mt-5">
+  <app-top-item *ngFor="let coin of topCoins" [coin]="coin"></app-top-item>
+</div>

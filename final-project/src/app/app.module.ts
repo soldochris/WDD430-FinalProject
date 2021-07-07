@@ -7,13 +7,15 @@ import { NavigationComponent } from './navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TopComponent } from './top/top.component';
 import { MyCoinsComponent } from './my-coins/my-coins.component';
+import { TopItemComponent } from './top/top-item/top-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     TopComponent,
-    MyCoinsComponent
+    MyCoinsComponent,
+    TopItemComponent
   ],
   imports: [
     BrowserModule,
