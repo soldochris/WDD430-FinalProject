@@ -1,3 +1,29 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Welcome to MyCryptops</h1>
+      <p class="lead text-muted">
+        You can save your favorite cryptocurrency from the top 100 list, or you can save your own cryptos if you want.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="col-lg-6 col-md-8 mx-auto">
+  <div class="form-group">
+    <input
+      type="text"
+      (input)="onKeyPress(searchBox.value)"
+      class="form-control"
+      placeHolder="Search"
+      #searchBox
+    />
+  </div>
+</div>
+
 <div class="container-sm d-flex flex-wrap justify-content-around mt-5">
-  <app-top-item *ngFor="let coin of topCoins" [coin]="coin"></app-top-item>
+  <app-top-item
+    *ngFor="let coin of topCoins | myCoinsFilter: term"
+    [coin]="coin"
+  ></app-top-item>
 </div>

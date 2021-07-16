@@ -8,7 +8,7 @@ import { TopServiceService } from './top-service.service';
 })
 export class TopComponent implements OnInit {
   topCoins = [];
-
+  term: string;
   constructor(private topService: TopServiceService) { }
 
   ngOnInit(): void {
@@ -19,5 +19,7 @@ export class TopComponent implements OnInit {
     );
   }
 
-
+  onKeyPress(value: string) {
+    this.term = value;
+  }
 }

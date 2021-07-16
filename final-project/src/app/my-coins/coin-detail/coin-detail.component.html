@@ -1,0 +1,23 @@
+<div class="card m-5">
+  <h3 class="card-header">{{ coin?.name }}</h3>
+  <div class="card-body">
+    <img [src]="coin.imageUrl" alt="{{ coin?.name }}" />
+  </div>
+  <div class="card-body">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Rank: {{ coin?.rank }}</li>
+      <li class="list-group-item">Symbol: {{ coin?.symbol }}</li>
+      <li class="list-group-item">Price ${{ coin?.price_usd }}</li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <a
+    class="btn btn-primary"
+    style="margin-right: 0.5rem"
+    [routerLink]="['/myCoins', coin?._id, 'edit']"
+  >
+    Edit
+  </a>
+  <a class="btn btn-danger" (click)="onDelete()"> Delete </a>
+  </div>
+</div>

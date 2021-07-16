@@ -1,0 +1,20 @@
+<a
+  href="#"
+  class="list-group-item clearfix m-1"
+  [routerLink]="[coin?._id]"
+  routerLinkActive="active"
+>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">
+      {{ coin?.name }}
+    </h4>
+  </div>
+  <span class="pull-right">
+    <img
+      [src]="coin?.imageUrl"
+      alt="{{ coin?.name }}"
+      class="img-responsive"
+      style="max-height: 50px"
+    />
+  </span>
+</a>

@@ -1,8 +1,8 @@
 <div
   class="card mb-3"
-  style="width: 22rem;"
+  style="width: 19rem;"
 >
-  <h3 class="card-header text-end">{{ coin.rank }}</h3>
+  <h4 class="card-header text-end">{{ coin.rank }}</h4>
   <div class="card-body d-flex justify-content-between">
     <h5 class="card-title">{{ coin.name }}</h5>
     <img
@@ -10,7 +10,7 @@
       alt="{{ coin.name }}"
     />
   </div>
-  <ul class="list-group list-group-flush">
+  <ul class="list-group ">
     <li class="list-group-item">
       <span class="text-primary fw-bold">USD: </span>${{ coin.price_usd }}
     </li>
@@ -48,6 +48,6 @@
     </li>
   </ul>
   <div class="card-body">
-    <button type="button" class="btn btn-success">Add to My coins</button>
+    <button type="button" class="btn btn-success" (click)="onAddToMyCoins()">Add to My coins</button>
   </div>
 </div>
